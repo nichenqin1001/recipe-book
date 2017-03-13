@@ -8,10 +8,13 @@ import { Recipe } from '../recipe';
 })
 export class RecipeListComponent implements OnInit {
 
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('link', 'zelda',
+      'http://vignette2.wikia.nocookie.net/zelda/images/d/d0/Princesse_Zelda_Artwork_TPHD.png/revision/latest?cb=20160214225828&path-prefix=fr', []),
+    new Recipe('link', 'zelda',
+      'http://vignette4.wikia.nocookie.net/zelda/images/e/e3/Zelda_Baguette_du_Vent_HW.png/revision/latest?cb=20150201125215&path-prefix=fr', []),
+  ];
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipe = new Recipe('link', 'zelda',
-    'http://piq.codeus.net/static/media/forum_pictures/Link_(Spirit_Tracks)_2_2517.png');
 
   constructor() { }
 
